@@ -1,0 +1,3 @@
+Teste
+Escrevendo no arquivo
+Escrevendo no arquivo novamente
