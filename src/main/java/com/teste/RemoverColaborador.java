@@ -1,12 +1,12 @@
 package com.teste;
 
-import com.dao.ColaboradorDAO;
+import com.dao.OracleColaboradorDAO;
 
 public class RemoverColaborador {
 
 	public static void main(String[] args) {
 		
-		ColaboradorDAO dao = new ColaboradorDAO();
+		OracleColaboradorDAO dao = new OracleColaboradorDAO();
 		// remover o colaborador de id = 1
 		dao.remover(1);
 	}

@@ -2,14 +2,14 @@ package com.teste;
 
 import java.util.Calendar;
 
-import com.dao.ColaboradorDAO;
+import com.dao.OracleColaboradorDAO;
 import com.java.bean.Colaborador;
 
 public class CadastroColaborador {
 
 	public static void main(String[] args) {
 		// Instancia o DAO
-		ColaboradorDAO dao = new ColaboradorDAO();
+		OracleColaboradorDAO dao = new OracleColaboradorDAO();
 
 		// Instancia o Colaborador
 		Colaborador colaborador = new Colaborador();

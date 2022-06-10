@@ -1,13 +1,13 @@
 package com.teste;
 
-import com.dao.ColaboradorDAO;
+import com.dao.OracleColaboradorDAO;
 import com.java.bean.Colaborador;
 
 public class AlterarColaborador {
 
 	public static void main(String[] args) {
 
-		ColaboradorDAO dao = new ColaboradorDAO();
+		OracleColaboradorDAO dao = new OracleColaboradorDAO();
 		// Recupera o colaborador com código 1
 		Colaborador colaborador = dao.buscarPorId(1);
 		// Imprime os valores do colaborador
