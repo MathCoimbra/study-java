@@ -1,4 +1,4 @@
-# API REST
+# REST API of a bank statement
 
 Project in MVC architecture, which uses the Java language, the Spring framework, PostgreSQL database, Maven for dependency management, Swagger for REST API documentation and Heruko for deploy.
 
