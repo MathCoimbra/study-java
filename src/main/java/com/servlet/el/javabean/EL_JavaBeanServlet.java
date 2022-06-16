@@ -1,4 +1,4 @@
-package com.el.javabean;
+package com.servlet.el.javabean;
 
 import java.io.IOException;
 import javax.servlet.ServletException;

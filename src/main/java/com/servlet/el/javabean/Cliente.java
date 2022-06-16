@@ -1,4 +1,4 @@
-package com.el.javabean;
+package com.servlet.el.javabean;
 
 public class Cliente {
 

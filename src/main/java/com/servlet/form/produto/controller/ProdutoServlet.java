@@ -1,4 +1,4 @@
-package com.form.produto.controller;
+package com.servlet.form.produto.controller;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.form.produto.bean.Produto;
+import com.servlet.form.produto.bean.Produto;
 
 /**
  * Servlet implementation class ProdutoServlet

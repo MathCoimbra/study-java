@@ -1,4 +1,4 @@
-package com.form.produto.bean;
+package com.servlet.form.produto.bean;
 
 public class Produto {
 	

@@ -1,4 +1,4 @@
-package com.el;
+package com.servlet.el;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
