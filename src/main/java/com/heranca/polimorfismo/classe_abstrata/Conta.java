@@ -1,4 +1,4 @@
-package com.polimorfismo.classe_abstrata;
+package com.heranca.polimorfismo.classe_abstrata;
 
 // para definição de uma classe abstrata é só adicionar a palavra abstract antes:
 public abstract class Conta {
