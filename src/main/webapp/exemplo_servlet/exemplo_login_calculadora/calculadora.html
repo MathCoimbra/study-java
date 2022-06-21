@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Calculadora</title>
+</head>
+<body>
+	<form action="calc" method="post">
+     <fieldset>
+		<legend>CALCULAR</legend>
+		<label>Valor - 1</label> 
+         <input type="text" name="valor1">
+		<hr />
+		<label>Operação</label>
+		<select name="operacao">
+			<option value="soma">+</option>
+			<option value="subtracao">-</option>
+			<option value="multiplicacao">*</option>
+			<option value="divisao">/</option>
+		</select>
+		<hr />
+		<label>Valor - 2</label> 
+         <input type="text" name="valor2">
+	</fieldset>
+	<input type="submit" value="Enviar">
+</form>
+</body>
+</html>
