@@ -1,7 +1,7 @@
-package com.teste;
+package com.projeto.empresa.teste.funcoes;
 
-import com.dao.OracleColaboradorDAO;
-import com.java.bean.Colaborador;
+import com.projeto.empresa.dao.OracleColaboradorDAO;
+import com.projeto.empresa.java.bean.Colaborador;
 
 public class AlterarColaborador {
 

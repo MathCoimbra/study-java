@@ -1,4 +1,4 @@
-package com.java.bean;
+package com.projeto.empresa.java.bean;
 
 import java.util.Calendar;
 

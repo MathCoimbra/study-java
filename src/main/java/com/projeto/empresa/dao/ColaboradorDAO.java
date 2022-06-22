@@ -1,10 +1,10 @@
-package com.dao;
+package com.projeto.empresa.dao;
 
 // Interface para implementação das funcionalidades
 
 import java.util.List;
 
-import com.java.bean.Colaborador;
+import com.projeto.empresa.java.bean.Colaborador;
 
 public interface ColaboradorDAO {
 
@@ -19,3 +19,4 @@ public interface ColaboradorDAO {
 	public Colaborador buscarPorId(int codigoBusca);
 	
 }
+	

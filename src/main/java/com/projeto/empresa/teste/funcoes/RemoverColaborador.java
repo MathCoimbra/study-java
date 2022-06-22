@@ -1,6 +1,6 @@
-package com.teste;
+package com.projeto.empresa.teste.funcoes;
 
-import com.dao.OracleColaboradorDAO;
+import com.projeto.empresa.dao.OracleColaboradorDAO;
 
 public class RemoverColaborador {
 

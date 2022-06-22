@@ -1,4 +1,4 @@
-package com.dao;
+package com.projeto.empresa.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -8,8 +8,8 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-import com.java.bean.Colaborador;
 import com.jdbc.EmpresaDBManager;
+import com.projeto.empresa.java.bean.Colaborador;
 
 // Classe que implementa as funcionalidades descritas na interface ColaboradorDAO
 

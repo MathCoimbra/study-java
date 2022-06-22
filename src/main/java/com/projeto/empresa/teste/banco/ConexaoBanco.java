@@ -1,14 +1,15 @@
-package com.teste.banco;
+package com.projeto.empresa.teste.banco;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
-public class CommitRollback {
+public class ConexaoBanco {
 
-	@SuppressWarnings("null")
-	public static void main(String[] args) throws SQLException, ClassNotFoundException {
+	public static void main(String[] args) {
 
 		// Código para conexão com o banco de dados
 
@@ -25,36 +26,17 @@ public class CommitRollback {
 
 			System.out.println("Conectado!");
 
-			// Desabilita o autocommit
-			conexao.setAutoCommit(false);
-
-			// Primeira transação - Atualiza o salário
-			PreparedStatement stmt = conexao
-					.prepareStatement("UPDATE TAB_COLABORADOR SET SALARIO = ? WHERE CODIGO_COLABORADOR = ?");
-			stmt.setDouble(1, 5000);
-			stmt.setInt(2, 1);
-			stmt.executeUpdate();
-
-			// Segunda transação - Atualiza o e-mail
-			PreparedStatement stmt2 = conexao
-					.prepareStatement("UPDATE TAB_COLABORADOR SET EMAIL = ? WHERE CODIGO_COLABORADOR = ?");
-			stmt2.setString(1, "teste@teste.com.br");
-			stmt2.setInt(2, 1);
-			stmt2.executeUpdate();
-
-			// Efetiva as duas transações
-			conexao.commit();
+			// Fecha a conexão
+			conexao.close();
 
 			// Tratamento de erro
 		} catch (SQLException e) {
 			System.err.println("Não foi possível conectar no Banco de Dados");
 			e.printStackTrace();
-			Connection conexao = null;
-			// Não efetiva as transações
-			conexao.rollback();
 		} catch (ClassNotFoundException e) {
 			System.err.println("O Driver JDBC não foi encontrado!");
 			e.printStackTrace();
+
 		}
 	}
 }

@@ -1,4 +1,4 @@
-package com.teste.banco;
+package com.projeto.empresa.teste.banco;
 
 import java.sql.CallableStatement;
 import java.sql.Connection;
