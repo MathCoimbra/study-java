@@ -10,14 +10,17 @@ import java.util.List;
 
 import com.jdbc.EmpresaDBManager;
 import com.projeto.empresa.java.bean.Colaborador;
+import com.projeto.empresa.singleton.ConnectionManager;
 
 // Classe que implementa as funcionalidades descritas na interface ColaboradorDAO
 
 public class OracleColaboradorDAO implements ColaboradorDAO {
 
-	private Connection conexao;
-
 	public void cadastrar(Colaborador colaborador) {
+		
+		// Utilizando o Singleton para instanciação através do método get criado
+		Connection conexao = ConnectionManager.getInstance().getConnection();
+		
 		PreparedStatement stmt = null;
 
 		try {
@@ -44,6 +47,9 @@ public class OracleColaboradorDAO implements ColaboradorDAO {
 	} 
 
 	public List<Colaborador> listar() {
+		
+		Connection conexao = ConnectionManager.getInstance().getConnection();
+		
 		//Cria uma lista de colaboradores
 		List<Colaborador> lista = new ArrayList<Colaborador>();
 		PreparedStatement stmt = null;
@@ -82,6 +88,9 @@ public class OracleColaboradorDAO implements ColaboradorDAO {
 	}
 
 	public void atualizar(Colaborador colaborador){
+		
+		Connection conexao = ConnectionManager.getInstance().getConnection();
+		
 		PreparedStatement stmt = null;
 
 		try {
@@ -109,6 +118,9 @@ public class OracleColaboradorDAO implements ColaboradorDAO {
 	}
 
 	public void remover(int codigo){
+		
+		Connection conexao = ConnectionManager.getInstance().getConnection();
+		
 		PreparedStatement stmt = null;
 
 		try {
@@ -130,6 +142,9 @@ public class OracleColaboradorDAO implements ColaboradorDAO {
 	}
 
 	public Colaborador buscarPorId(int codigoBusca){
+		
+		Connection conexao = ConnectionManager.getInstance().getConnection();
+		
 		Colaborador colaborador = null;
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
