@@ -4,13 +4,16 @@ public class TesteConta {
 
 	public static void main(String[] args) {
 
-		// Instanciando novos objetos:
+		// Para instanciar a classe é informado o nome da classe o tipo dessa classe (a
+		// variável) e o operador new para criação do objeto:
 
 		Conta contaCorrente = new Conta();
 		Conta contaPoupanca = new Conta();
 		Conta contaInvestimento = new Conta();
 
-		// Associando os atributos/vari�veis e valores aos novos objetos:
+		// Associando os atributos/variáveis e valores aos novos objetos:
+		
+		// Esses atributos também são chamados de variáveis de instância
 
 		contaCorrente.numero = 178568;
 		contaCorrente.saldo = 2000.00;
