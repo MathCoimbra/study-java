@@ -1,4 +1,4 @@
-package com.conceito.generics;
+package com.collections.conceito.generics;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,6 +19,7 @@ public class Exemplo {
 
 		caixaDeLivros.add(livro);
 		caixaDeLivros.add(livro2);
+		// ao tentar adicionar por exemplo um relogio irá dar erro
 		// caixaDeLivros.add(relogio);
 	}
 

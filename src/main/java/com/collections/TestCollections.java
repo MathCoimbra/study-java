@@ -6,17 +6,23 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.TreeMap;
+import java.util.TreeSet;
 
 public class TestCollections {
 
 	public static void main(String[] args) {
 
-		/*********** INTERFACE LIST ***********/
-
-		/***** Array List *****/
+		System.out.println("/*********** INTERFACE LIST ***********/");
+		
+		System.out.println();
+		
+		System.out.println("/***** Array List *****/");
 
 		ArrayList carrinho = new ArrayList();
 
@@ -32,7 +38,9 @@ public class TestCollections {
 
 		// método get utilizado para recuperar o valor de uma lista através de um índice
 
-		System.out.println(carrinho.get(1));
+		System.out.println("Todos os itens: " + carrinho);
+		
+		System.out.println("Item do índice 1 através do método get: " + carrinho.get(1));
 
 		// Quando não usado o conceito de Generics conforme exemplo abaixo é necessário
 		// utilizar um cast no método get
@@ -41,10 +49,10 @@ public class TestCollections {
 
 		valor3 = (int) carrinho.get(2);
 
-		System.out.println(valor3);
+		System.out.println();
 
-		System.out.println("////");
-
+		System.out.println("/***** List *****/");
+		
 		// método asList - torna a lista imutável, sem adição ou remoção de itens, mas
 		// permite a alteração de itens existentes
 		
@@ -56,11 +64,11 @@ public class TestCollections {
 		
 		// método min da Collections - retorna o menor valor da lista
 		
-		System.out.println(Collections.min(notas));
+		System.out.println("Numero minímo das notas através do método min: " + Collections.min(notas));
 		
 		// método max da Collections - retorna o maior valor da lista
 		
-		System.out.println(Collections.max(notas));
+		System.out.println("Numero máximo das notas através do método max: " + Collections.max(notas));
 		
 		// iterator - usado para percorrer um array, no caso abaixo utilizado para somar os valores
 		
@@ -71,20 +79,18 @@ public class TestCollections {
 			soma += next;
 		}
 		
-		System.out.println(soma);
+		System.out.println("Soma das notas após loop com iterator: " + soma);
 		
-		///
+		List<String> cars = new ArrayList<>();
 		
-		System.out.println();
-		
-		List<String> cars = List.of("celta", "gol");
+		cars.add("celta");
+		cars.add("gol");
 		
 		// método para limpar toda a lista
 		
 		cars.clear();
 		
-		System.out.println(cars);
-		
+		System.out.println("Lista de carros após o método clear(): " + cars);
 		
 		/***** Uso de GENERICS *****/
 
@@ -96,87 +102,138 @@ public class TestCollections {
 
 		// isEmpty = retorna em verdadeiro se a lista estiver vazia e falso caso não
 		// esteja vazia
-		System.out.println(carrinho2.isEmpty());
+		System.out.println("A lista de carrinho está vazia? " + carrinho2.isEmpty());
 
 		carrinho2.add("Laranja");
 		carrinho2.add("Maça");
+		carrinho2.add("Limão");
 		carrinho2.add("Banana");
 		
 		// método set - utilizado para substituição de um item, se espera o índice e o valor a ser substituído
 		carrinho2.set(1, "Uva");
 
-		System.out.println(carrinho2.isEmpty());
-
 		// size = retorna o tamanho da ArrayList
-		System.out.println(carrinho2.size());
+		System.out.println("Tamanho da lista de carrinho: " + carrinho2.size());
 
 		// contains = verifica se o valor está disponível na ArrayList
-		System.out.println(carrinho2.contains("Banana"));
+		System.out.println("Tem banana no carrinho? " + carrinho2.contains("Banana"));
 
-		// indexOf = retorna o primeiro índice da ocorrência especificada, no caso
-		// abaixo a primeira Laranja
-		System.out.println(carrinho2.get(carrinho2.indexOf("Laranja")));
+		// shuffle - método da Collections para deixar a ordem dos itens aleatória
+		Collections.shuffle(carrinho2);
+		System.out.println("Ordem aleatória dos itens: " + carrinho2);
+		
+		// sort - método da Collections para deixar a ordem dos itens de forma alfabética
+		Collections.sort(carrinho2);
+		System.out.println("Ordem alfabética dos itens: " + carrinho2);
 
-		// lastIndexOf = retorna o último índice da ocorrência especificada, no caso
-		// abaixo a última Laranja
-		System.out.println(carrinho2.get(carrinho2.lastIndexOf("Laranja")));
-
-		System.out.println("////");
-
-		// INTERFACE SET
+		System.out.println();
+		
+		System.out.println("/*********** INTERFACE SET ***********/");
+		
 		// Abaixo é criada uma variável do tipo set que é declarada como uma HashSet de
-		// Strings
+		// Strings 
 		Set<String> cesta = new HashSet<String>();
-
-		System.out.println(cesta.isEmpty());
-
-		cesta.add("Laranja");
-		cesta.add("Laranja");
-		cesta.add("LARANJA");
-		System.out.println(cesta.isEmpty());
-
+		
+		cesta.add("CEREAL");
+		cesta.add("Cereal");
+		cesta.add("Cereal");
+		cesta.add("Salgadinho");
+		cesta.add("Biscoito");
+		cesta.add("Chocolate");
+		cesta.add("Amendoim");		
+	
 		// o resultado desse print abaixo será 2 pois a classe HashSet não permite itens
 		// duplicados
-		System.out.println(cesta.size());
+		System.out.println("Quantos itens tem na cesta? " + cesta.size());
 
 		// através desse print pode-se ver que não há itens duplicados
-		System.out.println(cesta);
+		System.out.println("Há mais um item igual nessa lista, porém no print é desconsiderado, devido a interface não permitir valores duplicados: " + cesta);
 
-		System.out.println("////");
+		// método contains
+		System.out.println("Tem chocolate na cesta? " + cesta.contains("Chocolate"));
 
-		// INTERFACE MAP
+		// LinkedHashSet - utilizado abaixo para ordenar de acordo com a inserção
+		Set<String> cesta2 = new LinkedHashSet<String>();
+
+		cesta2.add("Salgadinho");
+		cesta2.add("CEREAL");
+		cesta2.add("Biscoito");
+		cesta2.add("Cereal");
+		cesta2.add("Chocolate");
+		cesta2.add("Cereal");
+		cesta2.add("Amendoim");
+		
+		//ordem por inserção dos itens
+		System.out.println("Ordenado por inserção através da implementação da LinkedHashSet: " + cesta2);
+		
+		// TreeSet - utilizado abaixo para ordenar de forma alfabética
+		Set<String> cesta3 = new TreeSet<String>();
+
+		cesta3.add("Salgadinho");
+		cesta3.add("CEREAL");
+		cesta3.add("Biscoito");
+		cesta3.add("Cereal");
+		cesta3.add("Chocolate");
+		cesta3.add("Cereal");
+		cesta3.add("Amendoim");
+		
+		//ordem por inserção dos itens
+		System.out.println("Ordenado de forma alfabética através da implementação da TreeSet: " + cesta3);
+		
+		System.out.println();
+
+		System.out.println("/*********** INTERFACE MAP ***********/");
+		
 		// Abaixo há dois tipos, pois é o tipo da chave e do valor (key and value)
-		Map<String, String> caixa = new HashMap<String, String>();
+		Map<String, String> caixa = new HashMap<>();
 
 		// put = comando para incluir a chave e o valor na variável caixa
 		caixa.put("M2225", "Fernando");
 		caixa.put("M2226", "Maria");
 		caixa.put("M2227", "Soraya");
-		caixa.put("M2228", "Ketelyn");
-
-		System.out.println(caixa);
-
-		System.out.println(caixa.isEmpty());
-		System.out.println(caixa.size());
-
+		
 		// containsKey = comando para verificar se existe uma determinada chave na
 		// hashmap
-		System.out.println(caixa.containsKey("M2225"));
+		System.out.println("A lista possui a chave M2225? " + caixa.containsKey("M2225"));
 
 		// containsValue = comando para verificar se existe um determinado valor na
 		// hashmap
-		System.out.println(caixa.containsValue("Fernando"));
+		System.out.println("A lista possui o valor Fernando? " + caixa.containsValue("Fernando"));
 
 		// get = recuperando valor através da chave
-		System.out.println(caixa.get("M2225"));
-		
+		System.out.println("Qual o valor da chave M2225? " + caixa.get("M2225"));
 
 		caixa.remove("M2228");
 
-		System.out.println(caixa.get("M2228"));
+		System.out.println("Lista após exclusão do item da chave M2228:" + caixa);
 
-		System.out.println(caixa);
+		// keySet - retorna todas as chaves (em uma lista do tipo Set)
+		System.out.println("Lista de todas as chaves: " + caixa.keySet());
+		
+		// values - retorna todas os valores (em uma coleção/collection)
+		System.out.println("Lista de todas as chaves: " + caixa.values());
+		
+		// LinkedHashMap - utilizado para ordenar de acordo com a inserção
+		
+		Map<String, String> caixa2 = new LinkedHashMap<>();
 
+		caixa2.put("M2228", "Adesvaldo");
+		caixa2.put("M2229", "Eriscleuda");
+		caixa2.put("M22210", "Osvalido");
+		
+		System.out.println("Lista ordenada por ordem de inserção: " + caixa2 );
+		
+		// TreeMap - utilizado abaixo para ordenação através da chave
+		
+		Map<Double, String> caixa3 = new TreeMap<>();
+
+		caixa3.put(22212d, "Maria");
+		caixa3.put(22213d, "Juli");
+		caixa3.put(22211d, "Matthew");
+		caixa3.put(22214d, "Thi");
+		
+		System.out.println("Lista ordenada pela chave: " + caixa3 );
+		
 		// quando um array de float é instanciado todos os itens dessa lista são
 		// atribuídos com zero, se nada for atribuído:
 
@@ -185,7 +242,7 @@ public class TestCollections {
 		valores[0] = 10;
 		valores[1] = 20;
 
-		System.out.println(valores[2]);
+		System.out.println("Valor de um array de float que foi instaciado, mas não possui atribuição de valor: " + valores[2]);
 	}
 
 }
