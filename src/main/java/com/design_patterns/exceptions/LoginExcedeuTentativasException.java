@@ -1,4 +1,4 @@
-package com.design.patterns.exceptions;
+package com.design_patterns.exceptions;
 
 @SuppressWarnings("serial")
 public class LoginExcedeuTentativasException extends Exception {

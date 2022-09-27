@@ -1,4 +1,4 @@
-package com.design.patterns.model;
+package com.design_patterns.model;
 
 public class UsuarioModel {
 

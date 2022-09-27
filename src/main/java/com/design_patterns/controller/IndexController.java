@@ -1,4 +1,4 @@
-package com.design.patterns.controller;
+package com.design_patterns.controller;
 
 import java.io.IOException;
 

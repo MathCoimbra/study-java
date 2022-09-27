@@ -1,11 +1,11 @@
-package com.design.patterns.business;
+package com.design_patterns.business;
 
-import com.design.patterns.exceptions.LoginAtivoException;
-import com.design.patterns.exceptions.LoginExcedeuTentativasException;
-import com.design.patterns.exceptions.LoginExpiradoException;
-import com.design.patterns.exceptions.LoginInvalidoException;
-import com.design.patterns.exceptions.LoginIpInvalidoException;
-import com.design.patterns.model.UsuarioModel;
+import com.design_patterns.exceptions.LoginAtivoException;
+import com.design_patterns.exceptions.LoginExcedeuTentativasException;
+import com.design_patterns.exceptions.LoginExpiradoException;
+import com.design_patterns.exceptions.LoginInvalidoException;
+import com.design_patterns.exceptions.LoginIpInvalidoException;
+import com.design_patterns.model.UsuarioModel;
 
 public class LoginBusiness {
 
