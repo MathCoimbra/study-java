@@ -1,8 +1,8 @@
-package com.vectores;
+package com.vetores;
 
 import java.util.Arrays;
 
-public class Vectores {
+public class Vetores {
 
 	public static void main(String[] args) {
 
