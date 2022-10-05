@@ -2,14 +2,16 @@
 public class Main {
 
 	public static void main(String[] args) {
-		Cliente venilton = new Cliente();
-		venilton.setNome("Venilton");
+		Cliente math = new Cliente();
+		math.setNome("Math");
 		
-		Conta cc = new ContaCorrente(venilton);
-		Conta poupanca = new ContaPoupanca(venilton);
+		Conta cc = new ContaCorrente(math);
+		Conta poupanca = new ContaPoupanca(math);
 
-		cc.depositar(100);
-		cc.transferir(100, poupanca);
+		cc.depositar(1000);
+		cc.transferir(50, poupanca);
+		cc.setTipoPessoa("PJ");
+		poupanca.setTipoPessoa("PF");
 		
 		cc.imprimirExtrato();
 		poupanca.imprimirExtrato();
