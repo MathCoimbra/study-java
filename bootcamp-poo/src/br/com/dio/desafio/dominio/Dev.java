@@ -30,11 +30,11 @@ public class Dev {
             soma += next;
         }
         return soma;
+    }
 
-        /*return this.conteudosConcluidos
-                .stream()
-                .mapToDouble(Conteudo::calcularXp)
-                .sum();*/
+    public int calcularHorasRestantes(Bootcamp bootcamp, Curso curso){
+        int horasRestantes = bootcamp.getCargaHoraria() - curso.getCargaHoraria();
+        return horasRestantes;
     }
 
 
