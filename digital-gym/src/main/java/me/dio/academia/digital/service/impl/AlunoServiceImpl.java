@@ -1,6 +1,7 @@
 package me.dio.academia.digital.service.impl;
 
 import me.dio.academia.digital.entity.Aluno;
+import me.dio.academia.digital.entity.AvaliacaoFisica;
 import me.dio.academia.digital.entity.form.AlunoForm;
 import me.dio.academia.digital.entity.form.AlunoUpdateForm;
 import me.dio.academia.digital.repository.AlunoRepository;
@@ -46,4 +47,15 @@ public class AlunoServiceImpl implements IAlunoService {
     public void delete(Long id) {
 
     }
+
+    @Override
+    public List<AvaliacaoFisica> getAllAvaliacaoFisicaId(Long id) {
+
+        Aluno aluno = alunoRepository.findById(id).get();
+
+        return aluno.getAvaliacoes();
+
+    }
+
+
 }

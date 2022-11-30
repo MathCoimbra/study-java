@@ -30,6 +30,6 @@ public class AvaliacaoFisica {
   private double altura;
 
   @Column(name = "imc")
-  private double imc = peso / altura;
+  private double imc;
 
 }
