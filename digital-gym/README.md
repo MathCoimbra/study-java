@@ -16,7 +16,6 @@
 <h2>Tech</h2>
 
 <ul>
-    <li>IDE IntelliJ</li>
     <li>Java 17</li>
     <li>Maven</li>
     <li>Spring Web</li>
@@ -25,6 +24,7 @@
     <li>Hibernate Validator</li>
     <li>Lombok</li>
     <li>Postman</li>
+    <li>IDE IntelliJ</li>
 </ul>
 
 ------------
