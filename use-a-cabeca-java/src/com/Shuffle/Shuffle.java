@@ -1,6 +1,6 @@
 package com.Shuffle;
 
-class Shuffle1 {
+class Shuffle {
 	public static void main(String[] args) {
 
 		int x = 3;

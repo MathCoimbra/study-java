@@ -1,4 +1,4 @@
-package com.exemplo.IfElse;
+package com.examples.IfElse;
 
 public class IfTest {
 	public static void main(String[] args) {
