@@ -1,4 +1,4 @@
-package com.PoolPuzzleOne;
+package com.PuzzlesInThePool;
 
 class PoolPuzzleOne {
 	public static void main(String[] args) {
