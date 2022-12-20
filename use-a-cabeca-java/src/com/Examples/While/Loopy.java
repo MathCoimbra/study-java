@@ -1,4 +1,4 @@
-package com.examples.While;
+package com.Examples.While;
 
 public class Loopy {
 	public static void main(String[] args) {
