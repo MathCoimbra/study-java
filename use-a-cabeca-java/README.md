@@ -3,4 +3,4 @@
 <h2>How to Run</h2>
 <p>Just clone the project and open in your favourite IDE</p>
 <h2>How to Use</h2>
-<p>Required previous knownledge in Java to understand the exercises</p>
+<p>Required previous knownledge in Java to understand the activities</p>
