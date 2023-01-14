@@ -29,6 +29,6 @@
 
 ------------
 
-This project was created based on the "Academia Digital" from [cami-la](https://www.linkedin.com/in/cami-la/ "cami-la").
+This project was created based on the "Academia Digital" from [cami-la](https://github.com/cami-la/academia-digital "cami-la").
 
 
