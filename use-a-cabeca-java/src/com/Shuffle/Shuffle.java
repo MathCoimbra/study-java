@@ -1,4 +1,4 @@
-package com.Shuffle;
+package com.shuffle;
 
 class Shuffle {
 	public static void main(String[] args) {

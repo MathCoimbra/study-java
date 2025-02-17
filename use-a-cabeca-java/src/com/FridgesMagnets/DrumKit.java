@@ -1,4 +1,4 @@
-package com.FridgesMagnets;
+package com.fridgesmagnets;
 
 
 class DrumKit {

@@ -1,4 +1,4 @@
-package com.PhraseOMatic;
+package com.phraseomatic;
 
 public class PhraseOMatic {
 	public static void main(String[] args) {

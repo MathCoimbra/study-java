@@ -1,4 +1,4 @@
-package com.PuzzlesInThePool;
+package com.puzzlesinthepool;
 
 public class EchoTestDrive {
 

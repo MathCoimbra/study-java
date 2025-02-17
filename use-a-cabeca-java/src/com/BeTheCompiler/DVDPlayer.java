@@ -1,4 +1,4 @@
-package com.BeTheCompiler;
+package com.bethecompiler;
 
 public class DVDPlayer {
 
