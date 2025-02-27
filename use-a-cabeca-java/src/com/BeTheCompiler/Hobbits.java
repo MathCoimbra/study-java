@@ -7,7 +7,7 @@ class Hobbits {
   public static void main(String[] args) {
 
     Hobbits[] h = new Hobbits[3];
-    int z = 0;
+    int z = -1;
 
     while (z < 2) {
       z = z + 1;
