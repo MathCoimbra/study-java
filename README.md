@@ -11,6 +11,7 @@
 | `digital-gym` | Gym management REST API with Spring Boot | Maven module |
 | `digital-bank` | Bank account management with OOP | Plain Java |
 | `bootcamp-poo` | OOP bootcamp challenge | IntelliJ project |
+| `use-a-cabeca-java` | Exercises from the "Use a Cabeça Java" book | Eclipse project |
 
 <h2>How to Run</h2>
 <p>Build all Maven modules from the root with <code>mvn clean install</code>, or open a single folder in your favourite IDE.<br>
